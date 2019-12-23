@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo常见问题汇总</title>
+    <url>/2019/12/21/Hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</url>
+    <content><![CDATA[<h1 id="Hexo-next主题常见问题汇总"><a href="#Hexo-next主题常见问题汇总" class="headerlink" title="Hexo + next主题常见问题汇总"></a>Hexo + next主题常见问题汇总</h1><h2 id="配置好搜索页面后点击搜索会出现一个空页面about-blank-blocked"><a href="#配置好搜索页面后点击搜索会出现一个空页面about-blank-blocked" class="headerlink" title="配置好搜索页面后点击搜索会出现一个空页面about:blank#blocked"></a>配置好搜索页面后点击搜索会出现一个空页面about:blank#blocked</h2><p>解决办法：<br>这里也是参考别人的，具体请点击<a 11 17 2019 href https: www.luoself.work next%e4%b8%bb%e9%a2%98%e4%b8%ad%e6%90%9c%e7%b4%a2%e4%bc%9a%e6%89%93%e5%bc%80%e6%96%b0%e7%9a%84%e7%a9%ba%e7%99%bd%e9%a1%b5%e9%97%ae%e9%a2%98%e7%9a%84%e8%a7%a3%e5%86%b3 "">NexT主题中搜索会打开新的空白页问题的解决</a></p>
+<p>具体操作步骤：在themes/next/layout/_partials/header.swig 将其中一段代码改为下面<br><img src="/2019/12/21/Hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/%E6%90%9C%E7%B4%A2%E5%BC%B9%E5%87%BA%E7%A9%BA%E7%99%BD%E9%A1%B5%E9%9D%A2.png" alt></p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>为什么要写博客？</title>
     <url>/2019/12/19/%E5%BC%80%E7%AF%87/</url>
     <content><![CDATA[<p>终于搭建起来了自己的博客，之前一直在CSDN上面写博客，后面发现很多人都是使用Hexo + github + 域名搭建的博客系统，因为自己比较懒，一直没有去做，马上20年了，就花了一段时间自己动手搭建了一下博客，下面写一下我对博客的一些理解</p>
