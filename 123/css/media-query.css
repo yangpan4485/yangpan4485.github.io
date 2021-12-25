@@ -75,7 +75,7 @@ MEDIA QUERIES
 		padding-right:0;
 	}
 	#container .merry-christmas-text{
-		top: 180px;
+		top: 0px;
 		font-size: 30px;
 	}
 	#logos {
@@ -89,7 +89,7 @@ MEDIA QUERIES
 		height: 47px;
 	}
 	#container #christmas_tree{
-		bottom:55px;
+		bottom:15px;
 	}
 	form textarea{
 		min-width: unset;

@@ -15,6 +15,7 @@ var Main = (function($) {
       Main.setElementsHeight();
       Main.setParallaxHeight();
       Main.countdownInit();
+      Main.audioPlayer();
     },
     //events
     events: function() {
@@ -91,18 +92,72 @@ var Main = (function($) {
     },
     countdownInit: function() {
       $("#countdown_container").countdown(
-        moment.tz("2019-01-11 16:00:00", "Europe/Amsterdam").toDate(),
+        moment.tz("2021-12-25 23:59:59", "Asia/Shanghai").toDate(),
         function(event) {
           $(this).html(
             event.strftime(
               '<div class="col-md-3 col-xs-3 countdown-globe">%D<div class="col-md-12 padding-none">Days</div></div>\
-					<div class="col-md-3 col-xs-3 countdown-globe">%H<div class="col-md-12 padding-none">Hours</div></div>\
-					<div class="col-md-3 col-xs-3 countdown-globe">%M<div class="col-md-12 padding-none">Minutes</div></div>\
-					<div class="col-md-3 col-xs-3 countdown-globe">%S<div class="col-md-12 padding-none">Seconds</div></div>'
+					     <div class="col-md-3 col-xs-3 countdown-globe">%H<div class="col-md-12 padding-none">Hours</div></div>\
+					     <div class="col-md-3 col-xs-3 countdown-globe">%M<div class="col-md-12 padding-none">Minutes</div></div>\
+				       <div class="col-md-3 col-xs-3 countdown-globe">%S<div class="col-md-12 padding-none">Seconds</div></div>'
             )
           );
         }
       );
+    },
+    audioPlayer: function() {
+      var audio = $(this);
+      //create container
+      var container = $('<div class="audio-player-container"></div>');
+      //create div element
+      var player = $('<div class="audio-player"></div>');
+      //create bars
+      var bars = $
+      (
+        '<div class="audio-bars">' +
+        '<div class="audio-bar"></div>' +
+        '<div class="audio-bar"></div>' +
+        '<div class="audio-bar"></div>' +
+        '<div class="audio-bar"></div>' +
+        '<div class="audio-bar"></div>' +
+        '<div class="audio-bar"></div>' +
+        '<div class="audio-bar"></div>' +
+        '<div class="audio-bar"></div>' +
+        '<div class="audio-bar"></div>' +
+        '<div class="audio-bar"></div>' +
+        '</div>'
+      );
+      audio.removeClass('audio-player');
+      container.append(player);
+      // container.insertAfter(audio);
+      player.append(bars);
+      audio[0].onplay = function()
+      {
+        player.addClass('on').removeClass('off');
+      };
+      audio[0].onpause = function()
+      {
+        player.addClass('off').removeClass('on');
+      };
+      bars.on('click', function()
+      {
+        if (audio[0].paused == false)
+        {
+          audio[0].pause();
+        }
+        else
+        {
+          audio[0].play();
+        }
+      });
+      if(audio[0].paused == false)
+      {
+        player.addClass('on').removeClass('off');
+      }
+      else
+      {
+        player.addClass('off').removeClass('on');
+      }
     }
   };
 })($);

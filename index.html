@@ -26,6 +26,9 @@
     />
   </head>
   <body>
+    <audio class="audio-player" autoplay loop>
+      <source src="audio/song.mp3" type="audio/mpeg">
+    </audio>
     <div id="loader"></div>
     <!-- Parallax Container -->
     <div id="container" class="parallax-container snow">
@@ -39,21 +42,18 @@
       <!-- Countdown Container -->
       <div id="countdown_container"></div>
 
-      <!-- Fris & Fruitig logo -->
-      <div id="logos">
-        <a href="https://www.frisenfruitig.nl"> <img src="images/frisenfruitig.png" /> </a>
-        <a href="https://www.hihiguide.com"> <img src="images/hihiguide.png" /> </a>
-        <a href="https://www.theceespot.nl"> <img src="images/theceespot.png" /> </a>
-      </div>
-
       <!-- Merry Christmas Text -> You can replace with anything you like! -->
       <div class="merry-christmas-text">
-        Eerste kerstborrel van het jaar! <br />
-        11 januari 2019 - 16:00 - the cee spot
+        <div class="fullpage">
+          <div id="home" class="section active">
+            Merry Christmas! <br />
+            圣诞快乐呀！一直想给你买礼物，但是没办法得到你的地址和电话，只能这样对你说圣诞节快乐了，网上找的模板，试着去改，因为不熟悉，折腾了大半天也没改出什么花样来，只能先这样了。希望你可以开开心心的，希望疫情早点过去，也希望可以和你在一起。想在你身边，当你懒的不想动的时候，可以给你煮一碗螺蛳粉。可能想的东西有些多了，哈哈！
+          </div>
+        </div>
       </div>
 
       <!-- Contact Pole Image -> From here the E-mail modal is triggered -->
-      <a id="mail_pole" href="https://frisenfruitig.nl/contact">
+      <a id="mail_pole">
         <img src="images/pole.png" class="img-responsive" alt="mail-pole" />
       </a>
       <!-- Christmas Tree -->
