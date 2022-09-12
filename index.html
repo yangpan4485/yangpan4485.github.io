@@ -1,121 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>小孙同学</title>
-    <meta name="language" content="zh-CN">
-    <meta name="title" content="小孙同学">
-    <meta name="github" content="https://github.com/sun0225SUN/Awesome-Love-Code">
-    <meta name="describe" content="收集不易，您的star是我坚持的动力，同时也欢迎各位PR哦! ">
-    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/sun0225SUN/photos/img/20210715233345.png">
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=0.6, maximum-scale=1, minimum-scale=0.6, user-scalable=0">
+<meta name="description" content="Wear your earphone">
+<title>A Letter</title>
+<link rel="icon" href="520.svg" />
+<link rel="stylesheet" href="stylesheets/my_style.css" />
 
-        body {
-            background-color: pink;
+<script src="js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/sakura.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/modernizr.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/typed.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bgm.js" type="text/javascript" charset="utf-8"></script>
 
-        }
-
-        #frame {
-            position: relative;
-            width: 400px;
-            height: 300px;
-            margin: 250px auto;
-        }
-
-        .left,
-        .right {
-            top: 0;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-        }
-
-        .left {
-            left: 35px;
-
-        }
-
-        .right {
-            right: 35px;
-            z-index: -1;
-        }
-
-        .bottom {
-            bottom: 36px;
-            left: 100px;
-            width: 200px;
-            height: 200px;
-            transform: rotate(45deg);
-            z-index: -1;
-
-        }
-
-        .heart {
-            position: absolute;
-            box-shadow: 0 0 40px #d5093c;
-            animation: beat .4s ease infinite normal;
-            background: linear-gradient(-90deg, #F50A45 0%, #d5093c 40%);
-        }
-
-        @keyframes beat {
-            0% {
-                transform: scale(1) rotate(225deg);
-                box-shadow: 0 0 40px #d5093c;
-            }
-
-            50% {
-                transform: scale(1.1) rotate(225deg);
-                box-shadow: 0 0 70px #d5093c;
-            }
-
-            100% {
-                transform: scale(1) rotate(225deg);
-                box-shadow: 0 0 40px #d5093c;
-                ;
-            }
-        }
-
-        .word {
-            position: absolute;
-            width: 50%;
-            top: 75%;
-            left: 25%;
-            text-align: center;
-            transform: translateY(-50%);
-            font-family: 'Love Ya Like A Sister', cursive;
-            font-size: 40px;
-            color: #c70012;
-            padding: 0 20px;
-        }
-    </style>
 </head>
 
 <body>
-
-    <div id="frame">
-        <div class="heart left"></div>
-        <div class="heart right"></div>
-        <div class="heart bottom"></div>
+    <img src="images/xx.png" class="gb" />
+    <div id="jsi-cherry-container"></div>
+	<section class="container" id="contact" >
+		<form class="flip">
+			<div class="front">
+                <h2 id="name">To&nbsp;&nbsp;计迎</h2>
+                <a id="open" href="#content"><span></span></a>
+			</div>
+		</form>
+	</section>
+<p>
+    <pre class="big" id="letter_pre"></pre>
+    <div style="display:none" id="letter_text">
+        To 计迎
+            渡的过山河星辰，淌不过你的一笑一颦。
+            经丘寻壑不及你，尾生抱柱也无悔意。
+            感谢命运，让我们在茫茫人海中相遇。
+            缘分就是这么奇妙，即使认识时间不长，但却感觉彼此已特别熟悉。
+            或许这就是命中注定吧，让我在合适的时间遇到了对的人。
+            从第一次见面之后，脑子里就全都是你，你的眉眼，你的微笑，精致的脸庞，可爱的样子，活泼的身影，全都深深的刻在我的脑海中。
+            每天早上醒来，第一件事是睁眼，第二件事就是拿起手机给你发消息。
+            每天晚上睡觉之前，都能和你语音，每天都是笑着入睡。
+            既然遇到了你，那么就不想再错过了。
+            从此以后，不论天涯海角，不管春夏秋冬，我都想和你在一起。
+            我想牵着你的手，走到白头。
+            我想扶着你的肩，给你安慰。
+            我想看着你的脸，展露笑容。
+            我想听着你诉说，生活种种。
+            你的过去我不曾参与，你的未来我想陪你一起。
+            不能为你金戈铁马，也不能许你一世繁华，不过我能给你一个小家。
+            我愿用三生烟火，换你一世迷离，我喜欢你!
+                                                                                                              From 杨盼
     </div>
+</p>
 
-    <b class="word">每次遇见你都心跳加速!</b>
+    <div id="div_container">
+        <!-- 最外层div，用于居中兼容PC和移动 -->
+        <div id="div_start_bg"></div>
+        <div id="div_onlyyou">
+          <!-- 用于设置背景 -->
+          <div id="div_oy_inner">
+            <!-- 用于存放content -->
+            <div class="div_oy_text">
+              <h1></h1>
+              <img class="img_oy_text" src="" />
+              <p class="p_oy_text"></p>
+              <div></div>
+            </div>
+            <ul id="ul_oy_btn">
+              <li onclick="oy_go_next()">Yes&nbsp;&nbsp;❤</li>
+              <li onclick="oy_show_benefit()">No&nbsp;&nbsp;✖</li>
+            </ul>
+            <div id="div_oy_note" onclick="oy_hide_note()">
+              <img src="images/emoji_kelian.jpg" alt="" /><br />请告诉我Yes！
+              <div id="div_oy_note_close">✖</div>
+            </div>
+            <div id="div_oy_yes">
+              <img src="images/emoji_bixin.jpg" alt="" /><br />太好了！哈哈~
+            </div>
+          </div>
+        </div>
 
-    <audio autoplay="autopaly" loop="loop" id="audios" preload="auto">
-        <source src="http://music.163.com/song/media/outer/url?id=526464145.mp3" />
-    </audio>
+        <div class="div_pure_words">
+          <div class="div_pure_words_bg">
+            <div class="div_pure_words_height"></div>
+          </div>
+        </div>
 
-    <script>
-        var b = document.body;
-        var c = document.getElementsByTagName('canvas')[0];
-        var a = c.getContext('2d');
-        document.body.clientWidth;
-        with (m = Math) C = cos, S = sin, P = pow, R = random; c.width = c.height = f = 600; h = -250; function p(a, b, c) { if (c > 60) return [S(a * 7) * (13 + 5 / (.2 + P(b * 4, 4))) - S(b) * 50, b * f + 50, 625 + C(a * 7) * (13 + 5 / (.2 + P(b * 4, 4))) + b * 400, a * 1 - b / 2, a]; A = a * 2 - 1; B = b * 2 - 1; if (A * A + B * B < 1) { if (c > 37) { n = (j = c & 1) ? 6 : 4; o = .5 / (a + .01) + C(b * 125) * 3 - a * 300; w = b * h; return [o * C(n) + w * S(n) + j * 610 - 390, o * S(n) - w * C(n) + 550 - j * 350, 1180 + C(B + A) * 99 - j * 300, .4 - a * .1 + P(1 - B * B, -h * 6) * .15 - a * b * .4 + C(a + b) / 5 + P(C((o * (a + 1) + (B > 0 ? w : -w)) / 25), 30) * .1 * (1 - B * B), o / 1e3 + .7 - o * w * 3e-6] } if (c > 32) { c = c * 1.16 - .15; o = a * 45 - 20; w = b * b * h; z = o * S(c) + w * C(c) + 620; return [o * C(c) - w * S(c), 28 + C(B * .5) * 99 - b * b * b * 60 - z / 2 - h, z, (b * b * .3 + P((1 - (A * A)), 7) * .15 + .3) * b, b * .7] } o = A * (2 - b) * (80 - c * 2); w = 99 - C(A) * 120 - C(b) * (-h - c * 4.9) + C(P(1 - b, 7)) * 50 + c * 2; z = o * S(c) + w * C(c) + 700; return [o * C(c) - w * S(c), B * 99 - C(P(b, 7)) * 50 - c / 3 - z / 1.35 + 450, z, (1 - b / 1.2) * .9 + a * .1, P((1 - b), 20) / 4 + .05] } } setInterval('for(i=0;i<1e4;i++)if(s=p(R(),R(),i%46/.74)){z=s[2];x=~~(s[0]*f/z-h);y=~~(s[1]*f/z-h);if(!m[q=y*f+x]|m[q]>z)m[q]=z,a.fillStyle="rgb("+~(s[3]*h)+","+~(s[4]*h)+","+~(s[3]*s[3]*-80)+")",a.fillRect(x,y,1,1)}', 0)
-    </script>
+    <audio id="music2" preload="auto" loop></audio>
 </body>
-
+<script src="js/letter.js" type="text/javascript" charset="utf-8"></script>
 </html>

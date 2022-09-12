@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Love You</title>
+  <meta name="language" content="zh-CN">
+  <link rel="icon" href="520.svg" />
+  <link type="text/css" rel="stylesheet" href="stylesheets/theme.css" />
+  <script src="js/jquery-1.11.2.min.js"></script>
+</head>
+
+<body>
+  <div id="div_container">
+    <!-- 最外层div，用于居中兼容PC和移动 -->
+    <div id="div_start_bg"></div>
+    <div id="div_onlyyou">
+      <!-- 用于设置背景 -->
+      <div id="div_oy_inner">
+        <!-- 用于存放content -->
+        <div class="div_oy_text">
+          <h1></h1>
+          <img class="img_oy_text" src="" />
+          <p class="p_oy_text"></p>
+          <div></div>
+          <ul id="ul_oy_benefit">
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+            <li class="li_oy_benefit"></li>
+          </ul>
+
+          
+        </div>
+        <ul id="ul_oy_btn">
+
+          <li onclick="oy_go_next()">Yes&nbsp;&nbsp;❤</li>
+          <li onclick="oy_show_benefit()">No&nbsp;&nbsp;✖</li>
+        </ul>
+        <div id="div_oy_note" onclick="oy_hide_note()">
+          <img src="images/emoji_kelian.jpg" alt="" /><br />请告诉我Yes！
+          <div id="div_oy_note_close">✖</div>
+        </div>
+        <div id="div_oy_yes">
+          <img src="images/emoji_bixin.jpg" alt="" /><br />太好了！哈哈~
+        </div>
+      </div>
+    </div>
+    <div class="div_pure_words">
+      <div class="div_pure_words_bg">
+        <div class="div_pure_words_height"></div>
+      </div>
+      <div class="div_pw_typed">
+        <span id="span_pw_typed"></span>
+      </div>
+    </div>
+
+  </div>
+  <audio autoplay="autopaly" loop="loop" id="biaobai">
+    <source src="images/biaobai.mp3" type="audio/mp3" />
+  </audio>
+
+
+  <script>
+    var theme = "pure_words";
+    console.log("theme ->" + theme);
+    var theme_content = {
+      pure_words_content:
+        "遇见你，是我所有美好故事的开始，看见你的第一眼，上帝就在我耳边说了四个字，在劫难逃!\n你的过去我来不及参与，你的未来我一定奉陪到底！\n我爱你！<um style='color: #F44336;'>💕</um>",
+      typed_bool: "typed_y",
+      cursor_char: "cursor_heart",
+      bg_style_pure_words: "bg_opacity",
+      bg_img: "images/3.jpg",
+      simple_page_content: "",
+      video_page_content: "",
+    };
+
+    var music_json = {
+      music_select: "m_online",
+      m_online_id: "7",
+      m_online_url: "images/1.mp3",
+      m_upload_name: "null",
+      m_upload_url: "null",
+    };
+    console.log(music_json);
+    var record_json = {
+      record_bool: "r_false",
+      r_wechat_time: "null",
+      r_wechat_url: "null",
+      r_wechat_amr: "null",
+    };
+    console.log(record_json);
+
+    var main_title = "我喜欢你❤️";
+
+    // console.log(main_title);
+    if (main_title == "" || main_title == "null") {
+      //允许标题为空
+      document.title = "慢慢喜欢你";
+    }
+
+    var window_height = $(window).height();
+    var pure_words_content = theme_content["pure_words_content"];
+    var str_cursorChar;
+    var typed_bool;
+    var interval_pw_height;
+    var height_div_pw = $(".div_pure_words_height").height();
+
+    var start_content = {
+      chase_title:
+        "所以，做我女朋友好不好呀<um style='color: #F44336;'>！</um>",
+      chase_text:
+        "承蒙你的出现，够我喜欢好多年，我希望，以后你能用我的名字拒绝所有人<um style='color: #F44336;'>💕</um>",
+      chase_benefit: [
+        "你是我睁眼闭眼都很想念的人",
+        "以后家务活都我干",
+        "以后工资卡都给你",
+        "以后吃饭我洗碗",
+        "以后你说一我不说二",
+        "好了，我们在一起吧",
+        "不要再拒绝了好吗",
+      ],
+      bg_style: "bg_custom",
+      bg_img: "images/2.jpg",
+      img_bool: "img_true",
+    }; //可能为null
+    
+    var start_id;
+    $(function () {
+      //此事件为触发互动创意
+      start_id = "onlyyou"; //可能为null
+      init_start(start_id);
+    });
+    function init_start(start_id) {
+      console.log("init_start ->" + start_id);
+      switch (start_id) {
+        case "loveformat":
+          $(".div_loveformat").show();
+          init_loveformat();
+          break;
+        case "hearttree":
+          $("#div_hearttree").show();
+          init_hearttree();
+          break;
+        case "courage":
+          $("#div_courage").show();
+          init_courage();
+          break;
+        case "birthdaycake":
+          $("#div_dbcake").show();
+          init_birthdaycake();
+          break;
+        case "intersect":
+          $("#div_intersect").show();
+          init_intersect();
+          break;
+        case "onlyyou":
+          $("#div_onlyyou").show();
+          init_onlyyou();
+          break;
+        default:
+          init_theme();
+      }
+    }
+    //开始动画主体部分
+    function init_theme() {
+      console.log("init_theme");
+      $("#div_start_bg").fadeOut();
+      init_pure_words();
+    }
+    var attachment = "null"; //可能为null
+    var attached_content = {
+      bool_save: false,
+    }; //可能为null
+    console.log(attached_content);
+
+    function init_attachment() {
+      //开始attachment
+      console.log("init_attachment ->" + attachment);
+      switch (attachment) {
+        case "timer":
+          init_at_timer();
+          break;
+        default:
+          return;
+      }
+    }
+  </script>
+  <!-- JQuery -->
+  <script src="js/typed.min.js"></script>
+  <script src="js/start_onlyyou.js"></script>
+  <script src="js/jweixin-1.2.0.js"></script>
+  <script src="js/theme_common.js"></script>
+</body>
+
+</html>
