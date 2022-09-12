@@ -4,9 +4,9 @@
     font-weight: 400;
     src: local('Satisfy Regular'), local('Satisfy-Regular'), url(font/rP2Hp2yn6lkG50LoCZOIHQ.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
+}
   
-  #jsi-cherry-container{
+#jsi-cherry-container{
       position: absolute;
       top: 0;
       width: 100%;
@@ -17,7 +17,7 @@
       overflow: hidden;
       opacity: 0.618;
       z-index: 99;
-  }
+}
 
 pre.small {line-height: 90%}
 pre.big {line-height: 150%}
@@ -25,19 +25,14 @@ pre.big {line-height: 150%}
 img.gb { position: fixed; /*固定*/ left: 45%; top: 0px;
     -webkit-animation: bd 5s ease-in-out infinite;}
 
-#div_onlyyou{position:relative;z-index:666;display:none;width:100%;background-size:100%;background-repeat:repeat;}
-#div_oy_inner{position:absolute;top:0;right:0;bottom:0;left:0;padding:12% 10% 0 10%;width:100%;min-height:400px;background:rgba(255,255,255,.8);text-align:center;}
-.div_oy_text{margin:0 auto 60px auto;text-align:left;font-weight:300;font-size:1.1em;}
-.div_oy_text h1{margin:14px 0;font-size:1.8em;}
-.div_oy_text p{margin:14px 0;}
-.div_oy_text img{width:100%;border-radius:5px;}
 
-  #letter_pre{
+#letter_pre{
     position:fixed;
     left:50px;
-	top:80px;
+	  top:80px;
     /*border: 2px solid #4CAF50;*/
-    font-size: 18px;
+    font-size:18px;
+    word-wrap:break-word
 }
   
   #footer {
