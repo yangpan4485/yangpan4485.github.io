@@ -12,8 +12,6 @@ window.onload = function() {
 
 document.getElementById("iframMusic").onload = function(){
     var music = document.getElementById("yanhua");
-    alert("123");
-    // music.src = '../images/music.mp3';
     music.oncanplay = function(){
         music.play();
     };
